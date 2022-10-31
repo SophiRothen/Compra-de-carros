@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monte seu carro</title>
+  <link rel="stylesheet" href="./face.css">
+</head>
+<script src="./face.js"></script>
+
+<body>
+  <form class="selectModel">
+
+    <!-- título da página -->
+    <h1 id="tituloMonte"> MONTE SEU CARRO</h1>
+
+    <div class="container">
+      <div class="content">
+        <div class="marcas">
+          <!-- select das opções de marcas -->
+          <select id="marca" #marca onclick="escolherCarro(marca.value)">
+            <option>selecione</option>
+
+            <optgroup label="MERCEDES-BENZ">
+              <option>C180</option>
+              <option>C63</option>
+              <option>G63</option>
+            </optgroup>
+
+            <optgroup label="VOLVO">
+              <option>XC40</option>
+              <option>XC60</option>
+              <option>XC90</option>
+            </optgroup>
+
+            <optgroup label="BMW">
+              <option>X1</option>
+              <option>Z4</option>
+              <option>M3</option>
+            </optgroup>
+
+          </select>
+        </div>
+
+
+        <!-- Espaço para as fotos : imagem principal e dos carros selecionados -->
+        <div id="foto" style="width: 320px; height: 180px; ">
+          <img src="../../imagens/imagem-principal.png" width="320" height="180">
+        </div>
+
+        <!-- Personalizações -->
+        <div id="selecoes_valor">
+          <h3>O que é interessante para você?</h3>
+
+          <!-- Opções de cores/caminho para a função -->
+          <div class="marcas">
+            <select id="cores" #cores onclick="coresSelect(marca.value, cores.value)">
+              <option>COR</option>
+            </select>
+          </div>
+
+          <!-- Opções de ano -->
+          <div class="marcas" #ano>
+            <select id="ano">
+              <option>ANO</option>
+            </select>
+          </div>
+
+          <!-- opções de motores/caminho para a função -->
+          <div class="marcas">
+            <select id="motores" #motores onclick="valorTotal(marca.value, ano.value, motores.value)">
+              <option>MOTORES </option>
+            </select>
+          </div>
+
+          <!-- Caixa do valor/Botão avançar -->
+          <div class="caixaValor">
+            <div style="display: flex; min-height: 40px; margin-top: 7px;">
+              <h4 id="valorTxt">Valor</h4>
+              <div id="valor"></div>
+            </div>
+            <a href="../face2/face2.html">
+              <input type="button" value="AVANÇAR" id="btnAvancar">
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>
